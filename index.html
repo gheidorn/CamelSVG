@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Camel Canvas</title>
+	<style>
+		body { margin: 0; }
+		canvas { border: 1px solid #000; }
+		#container { margin: 0 auto; width: 800px; }
+	</style>
+</head>
+<body>
+	<div id="container">
+		<svg id="CamelSVG" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+		  <circle cx="0" cy="0" r="20" stroke="red" stroke-width="2" fill="blue" />
+		</svg>
+	</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/camelsvg.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var circle = document.createElementNS("xmlns", "circle");
+	circle.setAttributeNS(null, "cx", "200");
+	circle.setAttributeNS(null, "cy", "50");
+	circle.setAttributeNS(null, "r", "10");
+	circle.setAttributeNS(null, "stroke", "red");
+	circle.setAttributeNS(null, "stroke-width", "1");
+	circle.setAttributeNS(null, "fill", "orange");
+	console.log($("svg"));
+	console.log(circle);
+	document.getElementById("CamelSVG").appendChild(circle);
+});
+</script>
+</body>
+</html>
